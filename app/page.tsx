@@ -14,8 +14,8 @@ export default function Page() {
         This is the landing page of the website. Try some navigation by clicking
         the button below
       </p>
-      <Link href={ROUTES.PROFILE}>
-        <button>Go to My Profile</button>
+      <Link href={ROUTES.ARTICLE}>
+        <button>Go to Articles</button>
       </Link>
     </>
   );

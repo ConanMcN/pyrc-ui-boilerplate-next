@@ -4,5 +4,5 @@
  */
 export enum ROUTES {
     HOME = "/",
-    PROFILE = "/profile"
+    ARTICLE = "/article"
 }

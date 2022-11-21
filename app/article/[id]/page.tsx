@@ -1,15 +1,16 @@
 import Link from "next/link";
-import { ROUTES } from "../../types";
+import { ROUTES } from "types";
 
 /**
  *
  * This serves as the landing page of the website as it
  * is the root level "page.tsx" file.
  */
-export default function ProfilePage() {
+export default function ArticleIdPage({ params }) {
   return (
     <>
-      <h1>Profile Page</h1>
+      <h1>Article {params.id}</h1>
+
       <p>
         Qui ad est dolor occaecat esse magna nisi irure dolore aliquip commodo
         cillum culpa. Labore ad cupidatat quis sit consectetur eiusmod magna
@@ -18,8 +19,9 @@ export default function ProfilePage() {
         labore culpa cupidatat consectetur incididunt ipsum. Deserunt ut commodo
         ipsum commodo ex sit labore aute.
       </p>
-      <Link href={ROUTES.HOME}>
-        <button>Back to Homepage</button>
+
+      <Link href={ROUTES.ARTICLE}>
+        <button>Back to Articles</button>
       </Link>
     </>
   );
