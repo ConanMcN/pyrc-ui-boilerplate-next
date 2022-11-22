@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { ROUTES } from "types";
 
-/**
- *
- * This serves as the landing page of the website as it
- * is the root level "page.tsx" file.
- */
 export default function ArticleIdPage({ params }) {
   return (
     <>
