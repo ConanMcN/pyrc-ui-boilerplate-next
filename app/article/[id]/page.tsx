@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { ROUTES } from "types";
 
-export default function ArticleIdPage({ params }) {
+type PageProps = {
+  params: {
+    id: string | number;
+  };
+};
+
+export default function ArticleIdPage({ params }: PageProps) {
   return (
     <>
       <h1>Article {params.id}</h1>
