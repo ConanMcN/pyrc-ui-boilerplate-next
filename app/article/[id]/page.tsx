@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button, Text } from "@payroc/react";
 import { ROUTES } from "types";
 
 type PageProps = {
@@ -10,19 +11,19 @@ type PageProps = {
 export default function ArticleIdPage({ params }: PageProps) {
   return (
     <>
-      <h1>Article {params.id}</h1>
+      <Text variant="h1">Article {params.id}</Text>
 
-      <p>
+      <Text>
         Qui ad est dolor occaecat esse magna nisi irure dolore aliquip commodo
         cillum culpa. Labore ad cupidatat quis sit consectetur eiusmod magna
         incididunt amet. Nisi velit laborum aliquip nulla elit tempor nulla
         irure ex cupidatat elit. Id sunt quis ad exercitation aliqua aliqua
         labore culpa cupidatat consectetur incididunt ipsum. Deserunt ut commodo
         ipsum commodo ex sit labore aute.
-      </p>
+      </Text>
 
       <Link href={ROUTES.ARTICLE}>
-        <button>Back to Articles</button>
+        <Button color="primary">Back to Articles</Button>
       </Link>
     </>
   );

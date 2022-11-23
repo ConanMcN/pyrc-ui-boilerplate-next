@@ -2,6 +2,7 @@
 
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
+import { Text } from "@payroc/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBookOpen,
@@ -68,7 +69,7 @@ export function Navigation({
           <li key={label}>
             <Link href={path}>
               {icon}
-              {(isDesktopMenuOpen || isMobile) && <span>{label}</span>}
+              {(isDesktopMenuOpen || isMobile) && <Text>{label}</Text>}
             </Link>
           </li>
         ))}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Text } from "@payroc/react";
 import { ROUTES } from "types";
 
 import Logo from "assets/logo-dark.png";
@@ -57,11 +58,11 @@ export function Footer() {
 
         {exampleFooterItems.map(({ label, links }) => (
           <li key={label}>
-            <p>{label}</p>
+            <Text>{label}</Text>
             {links.map(({ label: childLabel, path }) => (
-              <Link key={childLabel} href={path}>
-                {childLabel}
-              </Link>
+              <Text key={childLabel}>
+                <Link href={path}>{childLabel}</Link>
+              </Text>
             ))}
           </li>
         ))}

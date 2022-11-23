@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button, Text } from "@payroc/react";
 import { ROUTES } from "../types";
 
 /**
@@ -9,13 +10,13 @@ import { ROUTES } from "../types";
 export default function Page() {
   return (
     <>
-      <h1>Payroc UI Boilerplate</h1>
-      <p>
+      <Text variant="h1">Payroc UI Boilerplate</Text>
+      <Text>
         This is the landing page of the website. Try some navigation by clicking
         the button below
-      </p>
+      </Text>
       <Link href={ROUTES.ARTICLE}>
-        <button>Go to Articles</button>
+        <Button color="primary">Go to Articles</Button>
       </Link>
     </>
   );

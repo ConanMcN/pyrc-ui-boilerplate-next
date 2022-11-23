@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import "@payroc/react/build/index.css";
 
 import styles from "./styles.module.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
