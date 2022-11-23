@@ -1,5 +1,6 @@
 "use client";
 
+import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,11 +11,10 @@ import {
   faHome,
   faAngleDoubleLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import styles from "./styles.module.scss";
 import { ROUTES } from "types";
-import { Chevron } from "assets/icons";
+import { useWindowSize } from "hooks";
 
 const exampleNavItems = [
   {
@@ -45,32 +45,44 @@ const exampleNavItems = [
 ];
 
 type NavigationProps = {
-  isOpen: boolean;
-  setIsOpen: () => void;
+  isDesktopMenuOpen: boolean;
+  isMobileMenuOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-export function Navigation({ isOpen, setIsOpen }: NavigationProps) {
+export function Navigation({
+  isDesktopMenuOpen,
+  isMobileMenuOpen,
+  setIsOpen,
+}: NavigationProps) {
+  const { isMobile } = useWindowSize();
+
   return (
-    <nav className={styles.navigation}>
+    <nav
+      className={`${styles.navigation} ${
+        !isMobileMenuOpen ? styles["navigation--closed"] : ""
+      }`}
+    >
       <ul>
         {exampleNavItems.map(({ label, path, icon }) => (
           <li key={label}>
             <Link href={path}>
               {icon}
-              {isOpen && <span>{label}</span>}
+              {(isDesktopMenuOpen || isMobile) && <span>{label}</span>}
             </Link>
           </li>
         ))}
 
-        <li
-          className={`${styles["navigation-expand"]} ${
-            !isOpen ? styles["menu-closed"] : ""
-          }`}
-          onClick={setIsOpen}
-        >
-          <FontAwesomeIcon icon={faAngleDoubleLeft} width={16} />
-          {/* {isOpen && <span>Collapse Menu</span>} */}
-        </li>
+        {!isMobile && (
+          <li
+            className={`${styles["navigation--expanded"]} ${
+              !isDesktopMenuOpen ? styles["navigation--collapsed"] : ""
+            }`}
+            onClick={() => setIsOpen(!isDesktopMenuOpen)}
+          >
+            <FontAwesomeIcon icon={faAngleDoubleLeft} width={16} />
+          </li>
+        )}
       </ul>
     </nav>
   );

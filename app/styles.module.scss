@@ -5,14 +5,23 @@
         "nav content content"
         "nav content content";
     // The width of the sidebar, fill the rest
-    grid-template-columns: 280px 1fr 1fr;
+    grid-template-columns: 0 1fr 1fr;
     // The height of the header, fill the rest
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 60px 1fr;
     min-height: 100vh;
+
+    @media all and (min-width: 768px) {
+        grid-template-columns: 280px 1fr 1fr;
+        grid-template-rows: 80px 1fr;
+    }
 }
 
 .menu-closed {
-    grid-template-columns: 80px 1fr 1fr;
+    grid-template-columns: 0 1fr 1fr;
+
+    @media all and (min-width: 768px) {
+        grid-template-columns: 80px 1fr 1fr;
+    }
 }
 
 .main-content {

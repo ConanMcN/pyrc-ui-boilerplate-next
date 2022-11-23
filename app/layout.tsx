@@ -1,33 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "styles/globals.scss";
 import { Header, Footer, Navigation } from "./(components)";
+import { usePathname } from "next/navigation";
 
 type RootLayoutProps = {
   children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const path = usePathname();
+  const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  function handleExpandOnClick() {
-    setIsMenuOpen(!isMenuOpen);
-  }
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [path]);
 
   return (
     <html lang="en">
       <body>
         <div
           className={`${styles["root-layout"]} ${
-            !isMenuOpen ? styles["menu-closed"] : ""
+            !isDesktopMenuOpen ? styles["menu-closed"] : ""
           }`}
         >
-          <Header />
+          <Header isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
 
-          <Navigation isOpen={isMenuOpen} setIsOpen={handleExpandOnClick} />
+          <Navigation
+            isDesktopMenuOpen={isDesktopMenuOpen}
+            isMobileMenuOpen={isMobileMenuOpen}
+            setIsOpen={setIsDesktopMenuOpen}
+          />
 
           <main className={styles["main-content"]}>
             {children}
