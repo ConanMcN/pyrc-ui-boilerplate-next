@@ -11,6 +11,10 @@
     min-height: 100vh;
 }
 
+.menu-closed {
+    grid-template-columns: 80px 1fr 1fr;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
