@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@payroc/react/build/index.css";
 
 import styles from "./styles.module.scss";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import "styles/globals.scss";
 import { Header, Footer, Navigation } from "./(components)";
-import { usePathname } from "next/navigation";
 
 type RootLayoutProps = {
   children: React.ReactNode;

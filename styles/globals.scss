@@ -1,9 +1,189 @@
+/* RocGrotesk font family */
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-thin.woff);
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-extralight.woff);
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-light.woff);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-regular.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-medium.woff);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-bold.woff);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-extrabold.woff);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: url(/fonts/rocgrotesk-black.woff);
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Proxima Nova font family */
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-light-webfont.woff);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-lightit-webfont.woff);
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-regular-webfont.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-regularit-webfont.woff);
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-medium-webfont.woff);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-mediumit-webfont.woff);
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-semibold-webfont.woff);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-semiboldit-webfont.woff);
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-bold-webfont.woff);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-boldit-webfont.woff);
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-extrabold-webfont.woff);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-extraboldit-webfont.woff);
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-black-webfont.woff);
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/proximanova-blackit-webfont.woff);
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "ProximaNova";
 }
 
 a {
@@ -18,14 +198,3 @@ a {
 [data-nextjs-scroll-focus-boundary] {
   display: contents;
 }
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-  
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }
